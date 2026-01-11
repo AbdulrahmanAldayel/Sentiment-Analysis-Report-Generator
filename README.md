@@ -373,10 +373,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Project Maintainer**: [Abdulrahman Aldayel]
-- **Email**: [aaldayel@hotmail.co.uk]
-- **LinkedIn**: [linkedin.com/in/aaldayel]
-- **Portfolio**: [abdulrahman.aldayel.org]
+- **Project Maintainer**: Abdulrahman Aldayel
+- **Email**: aaldayel@hotmail.co.uk
+- **LinkedIn**: linkedin.com/in/aaldayel
+- **Portfolio**: abdulrahman.aldayel.org
 
 ---
 
