@@ -7,7 +7,7 @@
 
 > 🤖 **Intelligent Automation System for Real-time Media Monitoring and Sentiment Analysis**
 
-A sophisticated Robotic Process Automation (RPA) system that automatically collects S-OIL news articles from Korean media sources, performs AI-powered sentiment analysis, and generates comprehensive HTML reports with actionable insights.
+A sophisticated Robotic Process Automation (RPA) system that automatically collects S-OIL (could be changed to any other company) news articles from Korean media sources, performs AI-powered sentiment analysis, and generates comprehensive HTML reports with actionable insights.
 
 ---
 
