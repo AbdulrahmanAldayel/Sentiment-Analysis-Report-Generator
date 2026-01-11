@@ -1,0 +1,4 @@
+openai apikey:
+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
+
+text-davinci-003

@@ -1,0 +1,4 @@
+PSR RPA Limitations:
+- Cost of APIs
+- PI sentiment analysis is not accurate
+- 

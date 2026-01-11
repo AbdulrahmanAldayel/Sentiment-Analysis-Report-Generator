@@ -1,0 +1,13 @@
+Needed Updates for RSP:
+
+- Update News API so that it is cost efficient
+- Update PI Sentiment Analysis AI (SAAI) API so that it is accurate and cost efficient
+- Integrate with RPA 
+- Add documentation 
+- Enhance HTML
+- Make On-demand tool executable with GUI
+- Executable should be able to control API parameters and also report parameters producing a custom report on demand
+- Executable saves in a different file and preferably report should have different format (different html and color)
+- Reports should include unique ID's that have AvgPI encoded in them for referencing and ERP integration
+- Make HTML and CSS email/mobile responsive 
+- Make presentation explaining tool, justification, intended use, value to business, breif technical overview, demo, limitations, scalability (to go beyond kr press, and to include mentions in social media platforms)

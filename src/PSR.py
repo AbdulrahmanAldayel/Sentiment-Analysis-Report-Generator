@@ -1,0 +1,149 @@
+from docx import *
+from datetime import *
+import os
+
+document = Document(os.path.join(os.path.dirname(__file__), '..', 'templates', 'S-OIL Press Summary Report Template.docx'))
+sample_data = [{'title': "'여름 보너스 챙겨 휴가 가자'…중간배당주 담아볼까",
+  'author': 'https://www.asiae.co.kr',
+  'published_date': '2023-06-14 06:10:00',
+  'published_date_precision': 'timezone unknown',
+  'link': 'https://www.asiae.co.kr/article/2023061308391378532',
+  'clean_url': 'asiae.co.kr',
+  'excerpt': "중간배당에 나서는 기업이 늘면서 ‘여름 보너스'를 챙길 수 있는 종목에 관심이 커지고 있다. 투자자들은 중간배당 기준일(이달 30일) 이틀 전인 28일까지 관련...",
+  'summary': "기업, 주주환원정책 강화…13일 현재 26개 종목 중간배당 결정\n반도체·AI 기업 쏠림에 배당주 투자 시들…크레버스·리드코프 등 배당수익률 높아\n \n중간배당에 나서는 기업이 늘면서 ‘여름 보너스'를 챙길 수 있는 종목에 관심이 커지고 있다. 투자자들은 중간배당 기준일(이달 30일) 이틀 전인 28일까지 관련 주식을 사면 중간배당을 받을 수 있다.\n한국예탁결제원에 따르면 12월 결산 코스피(우선주 포함 22개)와 코스닥(4개)을 합쳐 26개 종목이 6월 말 중간배당 실시를 결정했다. 중간배당이란 회계연도 중간에 이익을 배당하는 것을 말한다. 12월 결산법이라면 12월 말 외에 6월30일 기준으로 중간배당을 한 차례 더 실시하는 것을 의미한다. 중간배당을 받으려면 배당기준일까지 주주명부에 이름을 올려야 한다. 이를 위해선 오는 28일까지 해당 주식을 사둬야 한다. 배당금은 7~8월에 지급된다.\n \n올해 처음으로 중간배당을 결정한 기업엔 \n \nE1\n \n \n \n \nE1\n \n017940\n \n|\n \n코스피\n \n \n정보\n \n \n \n \n \n \n \n현재가\n \n52,700\n \n \n \n전일대비\n \n1,100\n \n \n \n등락률\n \n+2.",
+  'rights': 'asiae.co.kr',
+  'rank': 18671,
+  'topic': 'news',
+  'country': 'KR',
+  'language': 'ko',
+  'authors': 'https://www.asiae.co.kr',
+  'media': 'https://cphoto.asiae.co.kr/listimglink/1/2023061308553861308_1686614138.jpg',
+  'is_opinion': False,
+  'twitter_account': '@asiae_daily',
+  '_score': 4.2213135,
+  '_id': '5f7e36a565ce16c3b86accf16a3ec7d1'},
+ {'title': '석유화학, 신용등급 줄줄이 하향...실적 부진 가시화 되나',
+  'author': '',
+  'published_date': '2023-06-13 22:45:00',
+  'published_date_precision': 'timezone unknown',
+  'link': 'https://www.newspim.com/news/view/20230613000612',
+  'clean_url': 'newspim.com',
+  'excerpt': '[서울=뉴스핌] 신수용 기자 = 업황 악화가 지속되는 가운데 신용등급 강등 리스크까지 겹치면서 석유화학업계의 시름이 깊어지고 있다. 14일 업계에 따르면 국내외 신용평가사들이 LG화학, 효성화학, 롯데케미칼 등의 신용등급을 하향 조정하고 있다. 효&#',
+  'summary': "[서울=뉴스핌] 신수용 기자 = 업황 악화가 지속되는 가운데 신용등급 강등 리스크까지 겹치면서 석유화학업계의 시름이 깊어지고 있다.\n \n14일 업계에 따르면 국내외 신용평가사들이 LG화학, 효성화학, 롯데케미칼 등의 신용등급을 하향 조정하고 있다.\n \n \n \n \n \n \n \n효성화학 베트남공장. [사진=효성화학]\n \n \n \n \n한국신용평가원은 효성화학의 이익창출력과 재무구조가 저하됐다며 무보증사채 신용등급을 기존의 'A(부정적)'에서 'A-(안정적)'로\xa0최근 하향 조정했다. NICE신용평가도 효성화학의 신용등급을 'A(부정적)'에서 'A-(긍정적)'으로 낮췄다.\n \n지난해 영업손실이 발생한 가운데 투자 부담까지 더해지면서 올해 1분기 부채비율이 치솟는 등 각종 재무안정성 지표가 악화되면서다. 효성화학은 지난해 연간 연결 기준으로 총 3367억 원의 영업손실을 냈다. 올해 1분기에도 453억 원 손실을 내며 적자를 이어갔다. 효성화학의 부채비율은 2021년 500%에서 올해 1분기 9959%까지 치솟았다.",
+  'rights': 'newspim.com',
+  'rank': 45108,
+  'topic': 'news',
+  'country': 'KR',
+  'language': 'ko',
+  'authors': '',
+  'media': 'https://img.newspim.com/news/2023/06/13/2306131417140700.jpg',
+  'is_opinion': False,
+  'twitter_account': '@newspim',
+  '_score': 7.498273,
+  '_id': '00732be13e23af3e2c72b74046ece8da'},
+ {'title': '주유소도 백화점도 비행기도...BTS 10주년에 기업들은 보랏빛 경쟁 뜨겁다',
+  'author': '',
+  'published_date': '2023-06-13 22:00:00',
+  'published_date_precision': 'full',
+  'link': 'https://www.hankookilbo.com/News/Read/A2023061317120004709',
+  'clean_url': 'hankookilbo.com',
+  'excerpt': "우체국 기념우표 판매에는 '오픈런'도",
+  'summary': '유통가·정유업계 등 기념행사 열어우체국 기념우표 판매에는 \'오픈런\'도\n외국인 방문객 수요 몰려…글로벌 행사로\n \n 방탄소년단(BTS) 데뷔 10주년을 맞아 기념우표 정식 판매를 시작한 13일 서울 중구 서울중앙우체국에서 시민들과 외국인관광객들이 기념우표를 구입하기 위해 줄지어 기다리고 있다. 뉴스1\n우체국에서 방탄소년단(BTS) 기념우표 판매가 시작된 13일 오전. 서울 중구 명동 서울중앙우체국 앞은 BTS의 사진과 기념품을 손에 든 팬들로 문전성시를 이뤘다. 문이 열리는 오전 9시 전부터 우표를 사려는 팬들이 \'오픈런\'을 감행하면서다. 우정사업본부 관계자는 "일찍부터 50여 명이 몰렸다"며 "명동은 외국인 관광객이 많은데 특히 일본 팬들이 여럿 보였다"고 전했다. BTS 기념우표는 총 10종으로 1장당 7,770원에 판매된다. 발행량은 150만 장이다. 지난달 22~25일 진행된 인터넷 사전 판매에선 12만 장이 세 시간 만에 다 팔리는 기염을 토했다.\n \n13일 오후 서울 여의도 켄싱턴 호텔 1층에 방탄소년단이 2021년 3월 미국 로스앤젤레스 스테이플스센터에서 열린 제63회 그래미상 시상식 축하 무대 당시 입었던 옷이 전시되어 있다.',
+  'rights': 'hankookilbo.com',
+  'rank': 29985,
+  'topic': 'news',
+  'country': 'KR',
+  'language': 'ko',
+  'authors': '',
+  'media': 'http://image.hankookilbo.com/level/A202/30/61/b66337e7-a139-4efd-b7c8-5ad0c335fe99.jpg?t=20230614070123',
+  'is_opinion': False,
+  'twitter_account': '@hankookilbo',
+  '_score': 7.3805847,
+  '_id': '9f2dfe295c573545d6cc7022f4525a5b'},
+ {'title': 'S-OIL, 울주군 관내 어려운 이웃 돕는 사업 7000만원 지원',
+  'author': 'https://www.asiae.co.kr',
+  'published_date': '2023-06-13 16:42:55',
+  'published_date_precision': 'timezone unknown',
+  'link': 'https://www.asiae.co.kr/article/2023061316425697587',
+  'clean_url': 'asiae.co.kr',
+  'excerpt': 'S-OIL은 13일 울주군청에서 이순걸 울주군수, S-OIL 오석동 전무, 조진호 울산사회복지공동모금회 사무처장, 손덕현 울주군자원봉사센터 이사장 등이 참석해 사업...',
+  'summary': "지역 주민 위한 다양한 공헌활동 지원\n \nS-OIL은 13일 울주군청에서 이순걸 울주군수, S-OIL 오석동 전무, 조진호 울산복지공동모금회 사무처장, 손덕현 울주군자원봉사센터 이사장 등이 참석해 사업비 7000만원을 울산복지공동모금회를 통해 울주군자원봉사센터에 전달했다.\n \n \n \n \n \n울산복지공동모금회를 통해 울주군자원봉사센터에 7000만원을 전달한 S-OIL.\n \n \n원본보기 아이콘\n \n \n \n이날 전달된 사업비 7000만원은 울주군자원봉사센터가 주관하는 계절김치 5종 세트 사랑의 먹거리 나눔 활동, 우수자원봉사자 격려 프로그램과 울주푸드뱅크마켓을 통해 울주군 저소득층 가정에 식품·생활용품을 지원하는 사업에 쓰일 예정이다.\n‘계절김치 5종 세트 사랑의 먹거리 나눔 활동'은 울주군 여성단체협의회와 S-OIL 자원봉사자들이 열무김치, 배추물김치 등을 직접 담가 더운 여름을 힘겹게 보내는 독거노인·저소득층에게 전달하는 활동이며, 자원봉사자 격려 프로그램은 자원봉사자 대축제 등에 우수자원봉사자들의 사기를 진작하기 위한 활동이다\n \n푸드마켓 지원 사업은 울주군 관내 푸드뱅크마켓에 식품·생활용품을 기부하고 저소득층 가정에서 직접 편의점 형태의 마켓을 방문해 식품·생활용품을 선택하거나 거동이 불편한 어르신들에게 가정배달을 실시하는 사업이다\n전달식에 참석한 S-OIL 오석동 전무는 '사업장이 위치한 울주군 지역의 어려운 이웃들을 위한 다양한 공헌활동을 지원할 수 있게 돼 기쁘게 생각한다'며 'S-OIL은 앞으로도 울주군과 함께 협력해 수혜자의 니즈에 맞는 다양한 자원봉사 프로그램을 개발해 꾸준히 지원하겠다'고 말했다.",
+  'rights': 'asiae.co.kr',
+  'rank': 18671,
+  'topic': 'news',
+  'country': 'KR',
+  'language': 'ko',
+  'authors': 'https://www.asiae.co.kr',
+  'media': 'https://cphoto.asiae.co.kr/listimglink/1/2023061316393462286_1686641974.jpg',
+  'is_opinion': False,
+  'twitter_account': '@asiae_daily',
+  '_score': 14.795354,
+  '_id': '6ed3217ed844c0d5fb99d6ae6d3bd72e'},
+ {'title': 'S-OIL, 울주군에 이웃돕기성금 7천만원',
+  'author': '차형석 기자',
+  'published_date': '2023-06-13 15:10:02',
+  'published_date_precision': 'full',
+  'link': 'https://www.ksilbo.co.kr/news/articleView.html?idxno=972207',
+  'clean_url': 'ksilbo.co.kr',
+  'excerpt': "S-OIL(주)이 13일 울주군을 방문, 취약계층 지원을 위한 성금 7000만원을 기탁했다. 후원금은 울주군자원봉사센터와 울주푸드뱅크마켓을 통해 울주군 내 사회적 취약계층을 위한 각종 지원사업에 사용될 예정이다. 오석동 전무는 '올해도 울주군 지역복지 향상을 위해 성금을 전달하게 돼 기쁘게 생각한다'며 '앞으로도 적극적인 사회공헌활동을 통해 나눔을…",
+  'summary': "▲ S-OIL(주)이 13일 울주군을 방문, 취약계층 지원을 위한 성금 7000만원을 기탁했다. 전달식에는 이순걸 군수와 오석동 S-OIL 전무, 손덕현 울주군자원봉사센터 이사장 등이 참석했다.\nS-OIL(주)이 13일 울주군을 방문, 취약계층 지원을 위한 성금 7000만원을 기탁했다. \n 후원금은 울주군자원봉사센터와 울주푸드뱅크마켓을 통해 울주군 내 사회적 취약계층을 위한 각종 지원사업에 사용될 예정이다.\n \n 오석동 전무는 '올해도 울주군 지역복지 향상을 위해 성금을 전달하게 돼 기쁘게 생각한다'며 '앞으로도 적극적인 사회공헌활동을 통해 나눔을 실천하고, 지역사회와 더불어 살아가는 기업이 되도록 노력하겠다'고 말했다.\n \n 이순걸 울주군수는 '지역사회의 가정형편이 어려운 이웃을 위해 따뜻한 정을 담아 성금을 기부해주신 에쓰오일에 감사드린다'며 '소중한 성금은 도움이 꼭 필요한 분들을 위해 뜻깊게 사용하겠다'고 밝혔다. \n \n 푸드마켓 지원 사업은 울주군 관내 푸드뱅크마켓에 식품 및 생활용품을 기부하고 저소득층 가정에서 직접 편의점 형태의 마켓을 방문해 식품 및 생활용품을 선택하거나 거동이 불편한 노인들에게 가정 배달을 실시하는 사업이다.",
+  'rights': 'ksilbo.co.kr',
+  'rank': 284609,
+  'topic': 'news',
+  'country': 'KR',
+  'language': 'ko',
+  'authors': '차형석 기자',
+  'media': 'https://cdn.ksilbo.co.kr/news/thumbnail/202306/972207_560230_2020_v150.jpg',
+  'is_opinion': False,
+  'twitter_account': '차형석 기자',
+  '_score': 14.08236,
+  '_id': '39a13d07aa406a9a406f0744b16a6a03'},
+ {'title': 'S-OIL, 이달부터 부생가스 공급 두배로 확대',
+  'author': '권지혜',
+  'published_date': '2023-06-13 15:10:02',
+  'published_date_precision': 'full',
+  'link': 'https://www.ksilbo.co.kr/news/articleView.html?idxno=972235',
+  'clean_url': 'ksilbo.co.kr',
+  'excerpt': 'S-OIL이 이산화탄소 제조 원료 공급을 증대해 국내 탄산 공급 안정에 기여해 주목받고 있다. 13일 S-OIL에 따르면 회사는 이달 중순부터 산업용 가스 제조업체인 동광화학에 탄산 제조 원료로 쓰이는 부생가스를 종전보다 2배 늘려 연간 20만t을 공급한다. S-OIL과 동광화학은 이산화탄소를 포집하고 이를 제품으로 활용하는 CCU 사업의 일환으로 지난…',
+  'summary': '▲ S-OIL 온산공장 작업자가 동광화학으로 탄산 공급량을 늘리기 위해 새로 설치한 설비를 점검하고 있다.\nS-OIL이 이산화탄소 제조 원료 공급을 증대해 국내 탄산 공급 안정에 기여해 주목받고 있다. \n 13일 S-OIL에 따르면 회사는 이달 중순부터 산업용 가스 제조업체인 동광화학에 탄산 제조 원료로 쓰이는 부생가스를 종전보다 2배 늘려 연간 20만t을 공급한다.\n \n S-OIL과 동광화학은 이산화탄소를 포집하고 이를 제품으로 활용하는 CCU 사업의 일환으로 지난 2016년부터 연간 10만t의 액화탄산 사업 협력을 지속해 왔다.\n \n S-OIL은 울산공장 수소제조공정에서 배출되는 다량의 이산화탄소가 포함된 부생가스를 파이프라인으로 공급하고, 동광화학은 부생가스에서 이산화탄소를 정제해 산업·식품용 액화탄산, 드라이아이스를 생산한다. S-OIL이 이산화탄소 제조 원료의 공급을 증대하면서 국내 탄산의 공급 안정에 기여할 것으로 기대된다.\n \n 탄산은 조선(용접), 반도체(세정용 특수가스), 유통(드라이아이스), 농업(식물성장촉진제) 등 산업 전반에 쓰이는 산업용 가스로, 정유사·석유화학사 등에서 발생하는 부생가스를 원료로 제조한다.',
+  'rights': 'Copyright (c) https://www.ksilbo.co.kr All rights reserved',
+  'rank': 284609,
+  'topic': 'news',
+  'country': 'KR',
+  'language': 'ko',
+  'authors': '권지혜',
+  'media': 'https://cdn.ksilbo.co.kr/news/thumbnail/202306/972235_560250_3216_v150.jpg',
+  'is_opinion': False,
+  'twitter_account': 'https://www.ksilbo.co.kr/news/articleView.html?idxno=972235',
+  '_score': 13.104968,
+  '_id': 'baba42f6180588108f753b393078cbc3'}]
+
+today = datetime.now().strftime("%x")
+
+document.core_properties.author = "Press Summary Report RPA"
+document.core_properties.category = "Report"
+document.core_properties.comments = f"S-OIL Press Summary Report for {today}"
+document.core_properties.title = f"S-OIL 언론 요약 보고서 {today}"
+
+sample_table = document.tables[0]
+table_style = sample_table.style.base_style
+
+title = sample_table.cell(0,0)
+author = sample_table.cell(1,0)
+publishdate = sample_table.cell(1,1)
+pi = sample_table.cell(1,2)
+summary = sample_table.cell(2,0)
+url = sample_table.cell(3,0)
+
+title.paragraphs[0].runs[0].text = sample_data[4]['title']
+author.paragraphs[0].runs[0].text = sample_data[4]['author']
+publishdate.paragraphs[0].runs[0].text = sample_data[4]['published_date'][0:10]
+pi.paragraphs[0].text = "PI: 2.1"
+summary.paragraphs[0].runs[0].text = sample_data[4]['summary']
+url.paragraphs[0].text = sample_data[4]['link']
+
+#Write function to do loop for each run in each cell and replace text
+
+#sample_table.style.base_style = table_style
+
+document.save(os.path.join(os.path.dirname(__file__), '..', 'output', f'S-OIL_PSR_{datetime.now().strftime("%m_%d_%Y")}.docx'))

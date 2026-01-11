@@ -1,0 +1,41 @@
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Page Content */
+.content {padding:20px;}
+
+#Logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.tg  {border-collapse:collapse;border-spacing:0;margin-left: 25%;margin-right: 25%; margin-top: 10px; margin-bottom: 10px;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cbpj{background-color:#cecece;font-family:Arial, Helvetica, sans-serif !important;font-size:14px;text-align:left;
+  vertical-align:top}
+.tg .tg-q50s{font-family:Arial, Helvetica, sans-serif !important;font-size:20px;text-align:center;
+  vertical-align:top; color: white; width: 20%;}
+.tg .tg-on03{font-family:Arial, Helvetica, sans-serif !important;font-size:14px;text-align:left;vertical-align:top}
+#pi_tab{font-family:Arial, Helvetica, sans-serif !important;font-size:30px;text-align:center;
+  vertical-align:top; color: white; margin-left: 25%; margin-right: 25%; margin-top: 10px; border: 1px solid black;}
+#pi_des{margin-left: 25%; margin-right: 25%;font-family:Arial, Helvetica, sans-serif !important;font-size:14px;text-align:left;vertical-align:top}
+
