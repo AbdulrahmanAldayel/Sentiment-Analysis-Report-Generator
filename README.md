@@ -48,23 +48,23 @@ This system demonstrates advanced Python automation capabilities by integrating 
 ### System Design
 
 ```
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+┌─────────────────┐    ┌───────────────────┐    ┌─────────────────┐
 │   NewsFetcher   │───▶│ SentimentAnalyzer │───▶│ ReportGenerator │
-│                 │    │                  │    │                 │
-│ • API Calls     │    │ • OpenAI GPT     │    │ • HTML Template │
-│ • Data Parsing  │    │ • PI Scoring     │    │ • Styling       │
-│ • Error Handling│    │ • Fallback Logic │    │ • File Output   │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
+│                 │    │                   │    │                 │
+│ • API Calls     │    │ • OpenAI GPT      │    │ • HTML Template │
+│ • Data Parsing  │    │ • PI Scoring      │    │ • Styling       │
+│ • Error Handling│    │ • Fallback Logic  │    │ • File Output   │
+└─────────────────┘    └───────────────────┘    └─────────────────┘
          │                       │                       │
          └───────────────────────┼───────────────────────┘
                                  │
-                    ┌─────────────────┐
-                    │ Configuration   │
-                    │                 │
-                    │ • API Keys     │
-                    │ • Constants    │
-                    │ • Paths        │
-                    └─────────────────┘
+                        ┌─────────────────┐
+                        │  Configuration  │
+                        │                 │
+                        │ • API Keys      │
+                        │ • Constants     │
+                        │ • Paths         │
+                        └─────────────────┘
 ```
 
 ### Design Patterns Implemented
@@ -373,24 +373,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Project Maintainer**: [Your Name]
-- **Email**: [your.email@example.com]
-- **LinkedIn**: [linkedin.com/in/yourprofile]
-- **Portfolio**: [yourportfolio.com]
+- **Project Maintainer**: [Abdulrahman Aldayel]
+- **Email**: [aaldayel@hotmail.co.uk]
+- **LinkedIn**: [linkedin.com/in/aaldayel]
+- **Portfolio**: [abdulrahman.aldayel.org]
 
 ---
 
-## 🌟 Show Your Support
+**Readme markup was generated with the help of AI**
 
-If this project helped you, please consider:
-
-- ⭐ Giving it a star on GitHub
-- 🔄 Sharing it with your network
-- 💡 Suggesting improvements
-- 🐛 Reporting issues
-
----
-
-**Made with ❤️ using Python and AI**
-
-> 🚀 *Transforming media monitoring through intelligent automation*
