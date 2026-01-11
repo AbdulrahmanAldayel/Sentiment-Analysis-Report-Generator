@@ -375,8 +375,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Project Maintainer**: Abdulrahman Aldayel
 - **Email**: aaldayel@hotmail.co.uk
-- **LinkedIn**: linkedin.com/in/aaldayel
-- **Portfolio**: abdulrahman.aldayel.org
+- **LinkedIn**: [linkedin.com/in/aaldayel](linkedin.com/in/aaldayel)
+- **Portfolio**: [abdulrahman.aldayel.org](abdulrahman.aldayel.org)
 
 ---
 
