@@ -67,13 +67,6 @@ This system demonstrates advanced Python automation capabilities by integrating 
                         └─────────────────┘
 ```
 
-### Design Patterns Implemented
-
-- **🏭 Factory Pattern**: For creating different types of analyzers
-- **🔧 Strategy Pattern**: For different sentiment analysis approaches
-- **📝 Observer Pattern**: For logging and monitoring
-- **🎯 Singleton Pattern**: For configuration management
-
 ---
 
 ## 📁 Project Structure
@@ -113,27 +106,6 @@ S-OIL Press Summary Report RPA/
 ├── 📂 logs/                          # Log files
 └── 📖 README.md                      # This file
 ```
-
----
-
-## � Security
-
-### API Key Protection
-
-This project is designed with security in mind:
-
-- **🛡️ Environment Variables**: Primary method for API key storage
-- **🔒 .gitignore**: Prevents accidental key commits
-- **📋 .env.example**: Template without actual keys
-- **🔄 Fallback Support**: Legacy config file option available
-
-### Security Best Practices
-
-1. **Never commit `.env` file** to version control
-2. **Use environment variables** in production deployments
-3. **Rotate API keys** regularly
-4. **Monitor API usage** for unusual activity
-5. **Use separate keys** for development and production
 
 ---
 
@@ -347,19 +319,6 @@ We welcome contributions! Please follow these guidelines:
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- **OpenAI** for providing the GPT API for sentiment analysis
-- **NewsCatcher** for comprehensive news aggregation services
-- **Beautiful Soup** for HTML parsing capabilities
-- **Python Community** for excellent libraries and support
-
 ### Python Libraries
 - `beautifulsoup4`: HTML parsing and manipulation
 - `requests`: HTTP requests for API calls
@@ -376,7 +335,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Project Maintainer**: Abdulrahman Aldayel
 - **Email**: aaldayel@hotmail.co.uk
 - **LinkedIn**: [linkedin.com/in/aaldayel](linkedin.com/in/aaldayel)
-- **Portfolio**: [abdulrahman.aldayel.org](abdulrahman.aldayel.org)
 
 ---
 
