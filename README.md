@@ -1,162 +1,125 @@
-# 📊 S-OIL Press Summary Report RPA
+# S-OIL Press Summary Report RPA
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://python.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-active-brightgreen.svg)]()
-[![API](https://img.shields.io/badge/API-OpenAI%20%7C%20NewsCatcher-orange.svg)]()
 
-> 🤖 **Intelligent Automation System for Real-time Media Monitoring and Sentiment Analysis**
+> Automated media monitoring and sentiment analysis system for S-OIL news coverage
 
-A sophisticated Robotic Process Automation (RPA) system that automatically collects S-OIL (could be changed to any other company) news articles from Korean media sources, performs AI-powered sentiment analysis, and generates comprehensive HTML reports with actionable insights.
-
----
-
-## 🎯 Project Overview
-
-This system demonstrates advanced Python automation capabilities by integrating multiple APIs, implementing object-oriented design patterns, and delivering business intelligence through automated media monitoring. It's designed to help organizations track brand sentiment across news sources and make data-driven decisions based on real-time media coverage.
-
-### 🚀 Key Achievements
-
-- **🔄 Full Automation**: End-to-end pipeline from data collection to report generation
-- **🧠 AI Integration**: Advanced sentiment analysis using OpenAI's GPT models
-- **📈 Business Intelligence**: Quantified sentiment scoring (0-10 PI scale)
-- **🎨 Professional Reports**: Styled HTML reports with color-coded insights
-- **🏗️ Enterprise Architecture**: Modular, scalable, and maintainable codebase
+An RPA system that collects S-OIL news articles from Korean media sources, performs AI-powered sentiment analysis using OpenAI, and generates HTML reports with sentiment scores and insights.
 
 ---
 
-## ✨ Features
+## Overview
 
-### Core Functionality
-- **🔍 Smart News Discovery**: Automated article fetching from Korean news sources
-- **🎯 Sentiment Analysis**: AI-powered positivity index calculation
-- **📊 Dynamic Reporting**: Real-time HTML report generation
-- **📈 Visual Analytics**: Color-coded sentiment indicators
-- **📅 Historical Tracking**: Archived reports with timestamp-based organization
+This project automates the process of tracking S-OIL's media presence by:
+- Fetching news articles from Korean sources via the NewsCatcher API
+- Analyzing sentiment using OpenAI's GPT models
+- Generating styled HTML reports with positivity index (PI) scores
+- Maintaining a historical archive of reports
 
-### Technical Features
-- **🏛️ Object-Oriented Design**: Clean separation of concerns
-- **🔧 Configuration Management**: Secure API key handling
-- **📝 Comprehensive Logging**: Multi-level logging with file rotation
-- **⚡ Error Handling**: Graceful failure recovery
-- **🎯 Type Safety**: Full type hinting for better code quality
+The system can be adapted to monitor any company by changing the search query.
 
 ---
 
-## 🏗️ Architecture
+## Features
 
-### System Design
+- Automated article collection from Korean news sources
+- AI-powered sentiment analysis with 0-10 positivity scoring
+- HTML report generation with color-coded sentiment indicators
+- Timestamped report archiving
+- Comprehensive logging and error handling
+- Modular, object-oriented architecture
+
+---
+
+## Architecture
+
+The system consists of three main components:
 
 ```
-┌─────────────────┐    ┌───────────────────┐    ┌─────────────────┐
-│   NewsFetcher   │───▶│ SentimentAnalyzer │───▶│ ReportGenerator │
-│                 │    │                   │    │                 │
-│ • API Calls     │    │ • OpenAI GPT      │    │ • HTML Template │
-│ • Data Parsing  │    │ • PI Scoring      │    │ • Styling       │
-│ • Error Handling│    │ • Fallback Logic  │    │ • File Output   │
-└─────────────────┘    └───────────────────┘    └─────────────────┘
-         │                       │                       │
-         └───────────────────────┼───────────────────────┘
-                                 │
-                        ┌─────────────────┐
-                        │  Configuration  │
-                        │                 │
-                        │ • API Keys      │
-                        │ • Constants     │
-                        │ • Paths         │
-                        └─────────────────┘
+NewsFetcher → SentimentAnalyzer → ReportGenerator
 ```
+
+**NewsFetcher**: Handles API calls to NewsCatcher, parses responses, and manages errors
+
+**SentimentAnalyzer**: Uses OpenAI GPT to analyze article sentiment and calculate PI scores
+
+**ReportGenerator**: Creates styled HTML reports from analyzed data
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 S-OIL Press Summary Report RPA/
-├── 📂 src/                           # Source code
-│   ├── 🐍 PSR_new_refactored.py     # Main automation script (refactored)
-│   ├── 🐍 PSR_new.py                # Original script
-│   └── 🐍 PSR.py                    # Legacy script
-├── 📂 config/                        # Configuration files
-│   ├── 🔑 newscatcher_API_apiKey.txt # NewsCatcher API key
-│   ├── 🔑 openai_apiKey.txt          # OpenAI API key
-│   └── ⚙️ html_template              # HTML template config
-├── 📂 templates/                     # Report templates
-│   ├── 📄 html_template.html         # HTML report template
-│   ├── 📄 S-OIL Press Summary Report Template.docx  # Word template
-│   └── 📄 S-OIL Press Summary Report Sample.pdf     # Sample PDF
-├── 📂 assets/                        # Static assets
-│   └── 🎨 css/styles.css            # Report styling
-├── 📂 output/                        # Generated reports
-│   ├── 📊 S_OIL_PSR_06_17_2023.html
-│   ├── 📊 S_OIL_PSR_06_19_2023.html
-│   └── 📊 S_OIL_PSR_06_20_2023.html
-├── 📂 notebooks/                     # Development notebooks
-│   ├── 📓 News_API.ipynb            # API testing
-│   └── 📓 Python-docx.ipynb         # Document processing
-├── 📂 vendor/                        # External libraries
-│   ├── 📦 newscatcherapi-sdk-python-main/
-│   └── 📦 openai-quickstart-python-master/
-├── 📂 docs/                          # Documentation
-│   ├── 📋 Needed Updates.txt         # Development roadmap
-│   ├── ⚠️ limitations.txt            # System limitations
-│   └── 📊 S-OIL Press Summary Report RPA Proposal.pptx
-├── 📂 tests/                         # Test data
-│   └── 📄 data.txt                  # Sample data
-├── 📂 logs/                          # Log files
-└── 📖 README.md                      # This file
+├── src/
+│   ├── PSR_new_refactored.py    # Main automation script (refactored version)
+│   ├── PSR_new.py               # Original script
+│   └── PSR.py                   # Legacy version
+├── config/
+│   ├── newscatcher_API_apiKey.txt
+│   ├── openai_apiKey.txt
+│   └── html_template
+├── templates/
+│   ├── html_template.html
+│   ├── S-OIL Press Summary Report Template.docx
+│   └── S-OIL Press Summary Report Sample.pdf
+├── output/                       # Generated reports
+├── notebooks/                    # Development/testing notebooks
+├── vendor/                       # External library sources
+├── docs/
+│   ├── Needed Updates.txt
+│   ├── limitations.txt
+│   └── S-OIL Press Summary Report RPA Proposal.pptx
+├── tests/
+└── logs/
 ```
 
 ---
 
-## � Installation
+## Installation
 
-### Prerequisites
+### Requirements
 
-- Python 3.8 or higher
-- Valid API keys for OpenAI and NewsCatcher
-- Git for version control
+- Python 3.8+
+- OpenAI API key
+- NewsCatcher API key
 
-### Setup Instructions
+### Setup
 
-1. **Clone the Repository**
+1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/s-oil-press-summary-rpa.git
    cd s-oil-press-summary-rpa
    ```
 
-2. **Create Virtual Environment**
+2. Create and activate a virtual environment:
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # Windows: venv\Scripts\activate
    ```
 
-3. **Install Dependencies**
+3. Install dependencies:
    ```bash
    pip install beautifulsoup4 requests openai newscatcherapi python-docx python-dotenv
    ```
 
-4. **Configure API Keys**
+4. Add your API keys:
    
-   **Option A: Environment Variables (Recommended)**
+   **Option 1: Environment variables (recommended)**
    ```bash
-   # Copy the example file
    cp .env.example .env
-   
-   # Edit with your actual API keys
-   nano .env  # or use your preferred editor
+   # Edit .env with your API keys
    ```
    
-   **Option B: Config Files (Legacy)**
+   **Option 2: Config files**
    ```bash
-   # Add your NewsCatcher API key
    echo "your_newscatcher_api_key" > config/newscatcher_API_apiKey.txt
-   
-   # Add your OpenAI API key
    echo "your_openai_api_key" > config/openai_apiKey.txt
    ```
 
-5. **Verify Installation**
+5. Run the script:
    ```bash
    cd src/
    python PSR_new_refactored.py
@@ -164,179 +127,151 @@ S-OIL Press Summary Report RPA/
 
 ---
 
-## 💻 Usage
+## Usage
 
-### Basic Usage
-
-Run the main automation script:
+### Basic usage
 
 ```bash
 cd src/
 python PSR_new_refactored.py
 ```
 
-### Advanced Configuration
+### Configuration
 
-Customize the behavior by modifying constants in the script:
+You can modify these constants in the script:
 
 ```python
-# Search parameters
-DEFAULT_QUERY = '"S-OIL"'          # Search query
+DEFAULT_QUERY = '"S-OIL"'          # Search term
 DEFAULT_LANGUAGE = 'ko'             # Article language
-DEFAULT_PAGE_SIZE = 25             # Articles per page
+DEFAULT_PAGE_SIZE = 25              # Articles per request
 
-# Sentiment analysis
-OPENAI_MODEL = "text-davinci-003"  # OpenAI model
-MAX_TOKENS = 50                    # Response tokens
+OPENAI_MODEL = "text-davinci-003"   # OpenAI model
+MAX_TOKENS = 50                     # Max response length
 
-# PI thresholds
 PI_THRESHOLDS = {
-    'high': 8,      # High positivity threshold
-    'medium': 6      # Medium positivity threshold
+    'high': 8,      # Scores 8-10 are highly positive
+    'medium': 6     # Scores 6-7 are moderately positive
 }
 ```
 
 ### Output
 
-The system generates:
-- **HTML Reports**: Styled reports with sentiment analysis
-- **Log Files**: Detailed execution logs
-- **Timestamped Archives**: Historical report storage
+The script generates:
+- HTML reports in the `output/` directory
+- Execution logs in `logs/`
+- Reports are named with timestamps (e.g., `S_OIL_PSR_06_17_2023.html`)
 
 ---
 
-## 📊 Sample Output
+## Understanding PI Scores
 
-### Report Features
-- **Average PI Score**: Overall sentiment metric
-- **Individual Article Analysis**: Detailed breakdown for each article
-- **Color-Coded Indicators**: Visual sentiment representation
-- **Responsive Design**: Mobile-friendly layout
+The Positivity Index (PI) ranges from 0-10:
 
-### PI Scale Interpretation
-- **8-10 (Green)**: Highly positive coverage
-- **6-7 (Orange)**: Moderately positive coverage
-- **0-5 (Red)**: Negative or neutral coverage
+- **8-10**: Highly positive coverage (green)
+- **6-7**: Moderately positive coverage (orange)
+- **0-5**: Negative or neutral coverage (red)
+
+Reports show both individual article scores and an average across all articles.
 
 ---
 
-## 🔧 Technical Specifications
+## Technical Details
 
-### API Integrations
+### APIs
 
 **NewsCatcher API**
 - Endpoint: `https://api.newscatcherapi.com/v2/search`
-- Rate Limit: 100 requests/hour (free tier)
-- Data Format: JSON
+- Free tier: 100 requests/hour
+- Returns JSON with article metadata
 
 **OpenAI API**
-- Model: `text-davinci-003`
-- Purpose: Sentiment analysis
-- Pricing: Pay-per-token
+- Model: text-davinci-003
+- Used for sentiment analysis
+- Pay-per-token pricing
 
-### Performance Metrics
+### Performance
 
-- **Processing Time**: ~2-3 seconds per article
-- **Memory Usage**: <100MB for typical runs
-- **Accuracy**: 85-90% sentiment classification
-- **Scalability**: Handles 100+ articles per run
+- Processing time: ~2-3 seconds per article
+- Memory usage: <100MB typical
+- Sentiment accuracy: 85-90%
+- Can handle 100+ articles per run
 
 ### Error Handling
 
-- **API Failures**: Automatic retry with exponential backoff
-- **Missing Data**: Graceful skipping of incomplete articles
-- **File Errors**: Comprehensive logging and user feedback
-- **Network Issues**: Timeout handling and recovery
+The system handles:
+- API failures (retry with backoff)
+- Missing/incomplete article data
+- File I/O errors
+- Network timeouts
+
+All errors are logged for debugging.
 
 ---
 
-## 🧪 Testing
+## Testing
 
-### Running Tests
-
+Test API configuration:
 ```bash
-# Test API connections
-python -c "from src.PSR_new_refactored import Configuration; print('API keys loaded successfully')"
-
-# Test sentiment analysis
-python -c "from src.PSR_new_refactored import SentimentAnalyzer, Configuration; sa = SentimentAnalyzer(Configuration()); print(sa.analyze_sentiment('Test', 'Test summary'))"
+python -c "from src.PSR_new_refactored import Configuration; print('API keys loaded')"
 ```
 
-### Test Data
-
-Sample articles are provided in `tests/data.txt` for development and testing purposes.
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Please follow these guidelines:
-
-1. **Fork the Repository**
-2. **Create a Feature Branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. **Commit Your Changes**
-   ```bash
-   git commit -m 'Add amazing feature'
-   ```
-4. **Push to the Branch**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-5. **Open a Pull Request**
-
-### Development Guidelines
-
-- Follow PEP 8 style guidelines
-- Add type hints to new functions
-- Include comprehensive docstrings
-- Write tests for new features
-- Update documentation
+Test sentiment analysis:
+```bash
+python -c "from src.PSR_new_refactored import SentimentAnalyzer, Configuration; \
+sa = SentimentAnalyzer(Configuration()); \
+print(sa.analyze_sentiment('Test', 'Test summary'))"
+```
 
 ---
 
-## 📋 Roadmap
+## Contributing
 
-### Planned Enhancements
+Contributions are welcome! Please:
 
-- [ ] **GUI Interface**: Desktop application for easy configuration
-- [ ] **Multi-language Support**: Expand beyond Korean media
-- [ ] **Social Media Integration**: Twitter, Facebook, Instagram monitoring
-- [ ] **Advanced Analytics**: Trend analysis and prediction
-- [ ] **Email Notifications**: Automated report delivery
-- [ ] **Database Integration**: PostgreSQL for historical data
-- [ ] **API Rate Limiting**: Intelligent request management
-- [ ] **Machine Learning**: Custom sentiment analysis model
+1. Fork the repo
+2. Create a feature branch (`git checkout -b feature/my-feature`)
+3. Commit changes (`git commit -m 'Add feature'`)
+4. Push to branch (`git push origin feature/my-feature`)
+5. Open a pull request
+
+Please follow PEP 8, add type hints, and include docstrings for new code.
+
+---
+
+## Roadmap
+
+Future improvements:
+- GUI for easier configuration
+- Support for multiple languages
+- Social media monitoring (Twitter, Facebook, etc.)
+- Email notification system
+- Database integration for historical data
+- Custom ML model for sentiment analysis
+- Better API rate limit handling
 
 ### Current Limitations
 
-- **API Costs**: Dependent on third-party API pricing
-- **Language Support**: Primarily optimized for Korean content
-- **Real-time Updates**: Scheduled runs only (no real-time streaming)
-- **Scalability**: Limited by API rate limits
+- Requires paid API access for scale
+- Optimized primarily for Korean content
+- Scheduled runs only (no real-time streaming)
+- Limited by third-party API rate limits
 
 ---
 
-### Python Libraries
-- `beautifulsoup4`: HTML parsing and manipulation
-- `requests`: HTTP requests for API calls
-- `openai`: OpenAI API integration
-- `newscatcherapi`: NewsCatcher API client
-- `python-docx`: Word document processing
-- `python-dotenv`: Environment variable management
-- `datetime`: Date and time handling
+## Dependencies
+
+Core libraries:
+- beautifulsoup4 - HTML parsing
+- requests - HTTP client
+- openai - OpenAI API client
+- newscatcherapi - NewsCatcher API client
+- python-docx - Word document handling
+- python-dotenv - Environment management
 
 ---
 
-## 📞 Contact
+## Contact
 
-- **Project Maintainer**: Abdulrahman Aldayel
-- **Email**: aaldayel@hotmail.co.uk
-- **LinkedIn**: [linkedin.com/in/aaldayel](linkedin.com/in/aaldayel)
-
----
-
-**Readme markup was generated with the help of AI**
-
+Abdulrahman Aldayel  
+Email: aaldayel@hotmail.co.uk  
+LinkedIn: [linkedin.com/in/aaldayel](https://linkedin.com/in/aaldayel)
